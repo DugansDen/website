@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="color-scheme" content="only light">
+    <style>
+        html { color-scheme: only light; forced-color-adjust: none; }
+    </style>
+    <title>Dugan's Legendary Den — Pop-Up Display 7.5' x 7.5'</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700;900&family=Titan+One&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .spec-label {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 16px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .display {
+            /* 7.5ft x 7.5ft square — scaled to 750px for screen preview */
+            width: 750px;
+            height: 750px;
+            background: #AD581E;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+            /* 2" margin at 1px=0.12in → 17px */
+            padding: 17px;
+        }
+
+        .display::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            /* 150px tile = 5x5 grid in 750px; checkerboard diagonals of pokeballs & fire energy */
+            background-image: url("brand/bg_tile.png");
+            background-size: 150px 150px;
+            opacity: 0.10;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .tagline {
+            font-family: 'Titan One', cursive;
+            font-size: 52px;
+            color: #E3BD4D;
+            letter-spacing: 0.1em;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            -webkit-text-stroke: 1px rgba(90,50,0,0.4);
+            text-shadow: 4px 4px 0 rgba(0,0,0,.6);
+            margin-top: 0;
+            padding: 12px 0;
+        }
+
+        .tagline span {
+            margin: 0 4px;
+        }
+
+        /* ---- Center row: QR — Logo — QR ---- */
+        .center-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 350px;
+            height: auto;
+        }
+
+        .qr-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 70px;
+        }
+
+        .qr-side .qr-border {
+            background: #FFFFFF;
+            padding: 10px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+            border: 2px solid rgba(255,255,255,0.6);
+        }
+
+        .qr-side .qr-border img {
+            width: 95px;
+            height: 95px;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .qr-side .qr-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+
+        .social-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 53px;
+        }
+
+        .social-divider {
+            width: 350px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #E3BD4D, transparent);
+        }
+
+        .social-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .social-icon {
+            width: 22px;
+            height: 22px;
+            fill: #E3BD4D;
+            opacity: 1;
+            filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.6));
+        }
+
+        .social-handle {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #E3BD4D;
+            letter-spacing: 0.08em;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+        }
+
+        .dimension-note {
+            color: #777;
+            font-size: 12px;
+            margin-top: 12px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media print {
+            body { background: white; }
+            .spec-label, .dimension-note { display: none; }
+            .display { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="spec-label">Pop-Up Display Proof — 7.5 ft &times; 7.5 ft &nbsp;|&nbsp; Pantone 718 C Background</div>
+
+    <div class="display">
+
+        <!-- BUY SELL TRADE across top -->
+        <div class="tagline">
+            <span>BUY</span>
+            <span>&bull;</span>
+            <span>SELL</span>
+            <span>&bull;</span>
+            <span>TRADE</span>
+        </div>
+
+        <!-- Center: QR — Logo — QR (tops aligned) -->
+        <div class="center-row">
+            <div class="qr-side">
+                <div class="qr-border">
+                    <img src="brand/website_QRcode.png" alt="Website QR Code">
+                </div>
+                <span class="qr-label">Visit Our Website</span>
+            </div>
+
+            <img src="brand/logo.png" alt="Dugan's Legendary Den Logo" class="logo">
+
+            <div class="qr-side">
+                <div class="qr-border">
+                    <img src="brand/website_QRcode.png" alt="Website QR Code">
+                </div>
+                <span class="qr-label">Visit Our Website</span>
+            </div>
+        </div>
+
+        <div class="social-section">
+            <div class="social-divider"></div>
+            <div class="social-row">
+                <!-- Instagram icon -->
+                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+                <!-- TikTok icon -->
+                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.78a8.18 8.18 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.21z"/>
+                </svg>
+                <span class="social-handle">@duganslegendaryden</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dimension-note">Scale: 1px = 0.12 in &nbsp;|&nbsp; Actual size: 90 in &times; 90 in</div>
+</body>
+</html>
