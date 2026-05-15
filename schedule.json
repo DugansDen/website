@@ -1,0 +1,77 @@
+{
+  "generated": "May 15, 2026 05:47 PM",
+  "shows": [
+    {
+      "month": "APRIL",
+      "monthShort": "APR",
+      "dateRange": "18\u201319",
+      "startDay": 18,
+      "endDay": 19,
+      "year": 2026,
+      "monthNum": 4,
+      "name": "NTX Fort Worth Card Show",
+      "venue": "Amon G. Carter Jr Exhibits Hall",
+      "city": "Fort Worth, TX"
+    },
+    {
+      "month": "APRIL",
+      "monthShort": "APR",
+      "dateRange": "24\u201326",
+      "startDay": 24,
+      "endDay": 26,
+      "year": 2026,
+      "monthNum": 4,
+      "name": "Texoma Trading Card Expo",
+      "venue": "Choctaw Durant Event Center",
+      "city": "Durant, OK"
+    },
+    {
+      "month": "MAY",
+      "monthShort": "MAY",
+      "dateRange": "2\u20133",
+      "startDay": 2,
+      "endDay": 3,
+      "year": 2026,
+      "monthNum": 5,
+      "name": "NTX Card Show",
+      "venue": "NTX Arena",
+      "city": "Arlington, TX"
+    },
+    {
+      "month": "MAY",
+      "monthShort": "MAY",
+      "dateRange": "9\u201310",
+      "startDay": 9,
+      "endDay": 10,
+      "year": 2026,
+      "monthNum": 5,
+      "name": "North ATX Card Show",
+      "venue": "Cadence Bank Center",
+      "city": "Austin, TX"
+    },
+    {
+      "month": "MAY",
+      "monthShort": "MAY",
+      "dateRange": "23\u201324",
+      "startDay": 23,
+      "endDay": 24,
+      "year": 2026,
+      "monthNum": 5,
+      "name": "CardsAndMore Pflugerville",
+      "venue": "Courtyard Marriott Pflugerville",
+      "city": "Pflugerville, TX"
+    },
+    {
+      "month": "JUNE",
+      "monthShort": "JUN",
+      "dateRange": "12\u201314",
+      "startDay": 12,
+      "endDay": 14,
+      "year": 2026,
+      "monthNum": 6,
+      "name": "Austin Card Show",
+      "venue": "Palmer Event Center",
+      "city": "Austin, TX"
+    }
+  ]
+}
