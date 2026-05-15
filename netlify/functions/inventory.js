@@ -147,6 +147,7 @@ export async function handler(event) {
           language:     d.language || 'English',
           condition:    (d.grade || 'NM').trim(),
           price_band:   band,
+          featured:     Boolean(d.featured),
           tcgplayer_url: (d.source_url || '').trim() || null,
         });
       } else if (cls === 'Graded') {
@@ -159,6 +160,7 @@ export async function handler(event) {
           grading_company: (d.grading_company || '').trim().toUpperCase(),
           grade:           (d.grade || '').trim(),
           price_band:      band,
+          featured:        Boolean(d.featured),
           cert_number:     String(d.id || '').trim() || null,
           slab_image:      String(d.id || '').trim() ? `card_images/slab_${String(d.id).trim()}.jpg` : null,
         });
@@ -172,6 +174,7 @@ export async function handler(event) {
           language:    d.language || 'English',
           quantity:    qty,
           price_band:  band,
+          featured:    Boolean(d.featured),
           sealed_image: sealedSlug ? `card_images/sealed_${sealedSlug}.jpg` : null,
         });
       }
