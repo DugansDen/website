@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>The Roster — Dugan's Legendary Den</title>
+    <meta name="description" content="Upcoming card shows for Dugan's Legendary Den across Texas. Dates, venues, and where to find the booth.">
+    <link rel="icon" type="image/png" href="brand/logo.png">
+    <link rel="stylesheet" href="styles-v2.css?v=20260515g">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&family=Alfa+Slab+One&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-roster has-bottom-nav">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="top-accent"></div>
+
+    <nav class="den-nav" aria-label="Primary">
+        <div class="den-nav-inner">
+            <a href="counter.html" class="den-nav-brand">
+                <img src="brand/logo.png" alt="" class="den-nav-logo">
+                <span class="den-nav-wordmark">
+                    <span class="name">Dugan's Legendary Den</span>
+                    <span class="tag">Card Shop · Texas</span>
+                </span>
+            </a>
+            <div class="den-nav-links">
+                <a href="counter.html"     class="den-nav-link">The Counter</a>
+                <a href="cases.html"       class="den-nav-link">The Cases</a>
+                <a href="roster.html"      class="den-nav-link" aria-current="page">The Roster</a>
+                <a href="apothecary.html"  class="den-nav-link">The Apothecary</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <section class="den-section">
+        <div class="den-section-inner">
+            <span class="den-eyebrow">Where We'll Be</span>
+            <h1 class="den-heading">The Roster</h1>
+            <div class="den-divider"><span class="den-divider-line"></span><span class="den-divider-diamond"></span><span class="den-divider-line"></span></div>
+            <p class="den-subheading">The roaming card cart's season schedule. Come find the booth — fresh inventory added every show.</p>
+
+            <div class="den-billing-grid" id="roster-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="den-footer">
+        <div class="den-footer-inner">
+            <div class="den-footer-col">
+                <h4>About the Den</h4>
+                <p>Family-owned Pokémon TCG shop based in Austin, Texas. Serving collectors at shows across Texas and beyond since 2025.</p>
+                <div class="den-footer-socials">
+                    <a href="https://www.instagram.com/duganslegendaryden" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@duganslegendaryden" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.2 8.2 0 004.76 1.52V7.05a4.84 4.84 0 01-1-.36z"/></svg>
+                    </a>
+                    <a href="mailto:duganslegendaryden@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="den-footer-col">
+                <h4>The Chambers</h4>
+                <ul>
+                    <li><a href="counter.html">The Counter</a></li>
+                    <li><a href="cases.html">The Cases</a></li>
+                    <li><a href="roster.html">The Roster</a></li>
+                    <li><a href="apothecary.html">The Apothecary</a></li>
+                </ul>
+            </div>
+            <div class="den-footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="mailto:duganslegendaryden@gmail.com">duganslegendaryden@gmail.com</a></li>
+                    <li>Austin, Texas · USA</li>
+                </ul>
+            </div>
+            <div class="den-footer-baseline">© 2026 Dugan's Legendary Den · All rights reserved</div>
+        </div>
+    </footer>
+
+    <nav class="den-bottom-nav" aria-label="Primary (mobile)">
+        <a href="counter.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Counter</span>
+        </a>
+        <a href="cases.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h6v6H4zm0 10h6v6H4zm10-10h6v6h-6zm0 10h6v6h-6z"/></svg>
+            <span>Cases</span>
+        </a>
+        <a href="roster.html" class="den-bottom-link" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+            <span>Roster</span>
+        </a>
+        <a href="apothecary.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
+            <span>Apothecary</span>
+        </a>
+    </nav>
+
+    <script>
+    /* ============================================================
+       Roster — show schedule loaded from /schedule.json (live,
+       CDN-cached static file updated by make_show_schedule_json.py).
+       ============================================================ */
+    const TODAY = new Date();
+
+    function gcalUrl(s) {
+        const pad = n => String(n).padStart(2, '0');
+        const start = `${s.year}${pad(s.monthNum)}${pad(s.startDay)}`;
+        const endDate = new Date(s.year, s.monthNum - 1, s.endDay + 1);
+        const end = `${endDate.getFullYear()}${pad(endDate.getMonth() + 1)}${pad(endDate.getDate())}`;
+        const title = encodeURIComponent(`${s.name} — Dugan's Legendary Den`);
+        const details = encodeURIComponent(`Find Dugan's Legendary Den at ${s.name}. Venue: ${s.venue}, ${s.city}.`);
+        const location = encodeURIComponent(`${s.venue}, ${s.city}`);
+        return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`;
+    }
+
+    function directionsUrl(s) {
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.venue + ', ' + s.city)}`;
+    }
+
+    function renderBilling(s, featured) {
+        return `
+            <article class="den-billing${featured ? ' den-billing--featured' : ''}">
+                <div class="den-billing-month">${s.month}</div>
+                <div class="den-billing-dates">${s.dateRange}</div>
+                <h3 class="den-billing-name">${s.name}</h3>
+                <p class="den-billing-venue">${s.venue}<br>${s.city}</p>
+                <div class="den-billing-actions">
+                    <a class="den-billing-action" href="${directionsUrl(s)}" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                        Directions
+                    </a>
+                    <a class="den-billing-action" href="${gcalUrl(s)}" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        Add to Calendar
+                    </a>
+                </div>
+            </article>
+        `;
+    }
+
+    function renderPastBilling(s) {
+        return `
+            <article class="den-billing den-billing--past">
+                <span class="den-billing-past-pill">Past</span>
+                <div class="den-billing-month">${s.month}</div>
+                <div class="den-billing-dates" style="font-size:1.8rem;">${s.dateRange}</div>
+                <h3 class="den-billing-name" style="font-size:1rem;">${s.name}</h3>
+                <p class="den-billing-venue" style="font-size:0.82rem;">${s.venue}<br>${s.city}</p>
+            </article>
+        `;
+    }
+
+    function renderRoster(shows) {
+        const upcoming = shows.filter(s => new Date(s.year, s.monthNum - 1, s.endDay) >= TODAY);
+        const past     = shows.filter(s => new Date(s.year, s.monthNum - 1, s.endDay) <  TODAY);
+
+        const grid = document.getElementById('roster-grid');
+        let html = '';
+
+        if (upcoming.length) {
+            html += upcoming.map((s, i) => renderBilling(s, i === 0)).join('');
+        } else {
+            html += '<p style="grid-column:1/-1;text-align:center;color:var(--dld-fg-muted);padding:2rem;">No upcoming shows posted yet — check back soon, or follow on Instagram for announcements.</p>';
+        }
+
+        if (past.length) {
+            html += `<div style="grid-column:1/-1;margin-top:2.5rem;text-align:center;">
+                <span class="den-eyebrow" style="display:inline-block;">Recent Shows</span>
+            </div>`;
+            html += [...past].reverse().map(renderPastBilling).join('');
+        }
+
+        grid.innerHTML = html;
+    }
+
+    fetch('/schedule.json')
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(data => renderRoster(data.shows || []))
+        .catch(() => {
+            document.getElementById('roster-grid').innerHTML =
+                '<p style="grid-column:1/-1;text-align:center;color:var(--dld-fg-muted);padding:2rem;">Show schedule unavailable — follow on Instagram for updates.</p>';
+        });
+    </script>
+
+</body>
+</html>

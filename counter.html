@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>The Counter — Dugan's Legendary Den</title>
+    <meta name="description" content="Welcome to Dugan's Legendary Den — a roaming Pokémon TCG shop based in Austin, Texas. Browse the cases, catch us at a show, or stock your kit.">
+    <meta property="og:title" content="Dugan's Legendary Den">
+    <meta property="og:description" content="Cards · Collectibles · Community. Catch us at the next Texas card show.">
+    <meta property="og:image" content="https://www.dugansden.com/brand/logo.png">
+    <link rel="icon" type="image/png" href="brand/logo.png">
+    <link rel="stylesheet" href="styles-v2.css?v=20260515g">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English+SC&family=Alfa+Slab+One&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-counter has-bottom-nav">
+
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="top-accent"></div>
+
+    <!-- ====== TOP NAV ====== -->
+    <nav class="den-nav" aria-label="Primary">
+        <div class="den-nav-inner">
+            <a href="counter.html" class="den-nav-brand" aria-label="Dugan's Legendary Den — home">
+                <img src="brand/logo.png" alt="" class="den-nav-logo">
+                <span class="den-nav-wordmark">
+                    <span class="name">Dugan's Legendary Den</span>
+                    <span class="tag">Card Shop · Texas</span>
+                </span>
+            </a>
+            <div class="den-nav-links">
+                <a href="counter.html"     class="den-nav-link" aria-current="page">The Counter</a>
+                <a href="cases.html"       class="den-nav-link">The Cases</a>
+                <a href="roster.html"      class="den-nav-link">The Roster</a>
+                <a href="apothecary.html"  class="den-nav-link">The Apothecary</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <!-- ====== HERO ====== -->
+    <section class="den-hero">
+        <div class="den-hero-plank" aria-hidden="true"></div>
+        <div class="den-hero-inner">
+            <div class="den-hero-sign">
+                <h1 class="sr-only">Dugan's Legendary Den — The Counter</h1>
+                <img src="brand/logo.png" alt="Dugan's Legendary Den" class="den-hero-logo">
+                <p class="den-hero-tagline">Cards · Collectibles · Community</p>
+                <p class="den-hero-subtitle">Ye olde card shop, roaming Texas and beyond since 2025.<br>Open for business at the next show.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== THE TRIO — next show / cards carousel / apothecary preview ====== -->
+    <section class="den-section den-trio-section" style="padding-top:1rem;">
+        <div class="den-section-inner">
+            <div class="den-trio" role="list">
+
+                <!-- 1. NEXT SHOW (live data from JS — first upcoming show) -->
+                <article class="den-trio-tile den-trio-show-tile" role="listitem">
+                    <span class="den-trio-banner">Next Up</span>
+                    <span class="den-trio-eyebrow">Next Show</span>
+                    <div class="den-trio-show" id="trio-show">
+                        <!-- Populated by JS -->
+                    </div>
+                    <a href="roster.html" class="den-trio-cta">View the full Roster →</a>
+                </article>
+
+                <!-- 2. CASES (auto-rotating featured-card carousel) -->
+                <article class="den-trio-tile den-trio-cases" role="listitem">
+                    <span class="den-trio-eyebrow">This Week's Picks</span>
+                    <div class="den-trio-carousel" id="trio-carousel" aria-live="polite">
+                        <!-- Populated by JS — placeholder tiles render at load -->
+                    </div>
+                    <a href="cases.html" class="den-trio-cta">Browse the Cases →</a>
+                </article>
+
+                <!-- 3. APOTHECARY (3 featured kit items with vintage icon plates) -->
+                <article class="den-trio-tile" role="listitem">
+                    <span class="den-trio-eyebrow">Stock the Kit</span>
+                    <ul class="den-trio-apothecary" id="trio-apothecary">
+                        <!-- Populated by JS -->
+                    </ul>
+                    <a href="apothecary.html" class="den-trio-cta">Visit the Apothecary →</a>
+                </article>
+
+            </div>
+
+            <!-- Socials sit right under the trio for prominence -->
+            <div class="den-socials den-socials--under-trio" style="margin-top:1.5rem;">
+                <a href="https://www.instagram.com/duganslegendaryden" target="_blank" rel="noopener noreferrer" class="den-social instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    Instagram
+                </a>
+                <a href="https://www.tiktok.com/@duganslegendaryden" target="_blank" rel="noopener noreferrer" class="den-social tiktok">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.2 8.2 0 004.76 1.52V7.05a4.84 4.84 0 01-1-.36z"/></svg>
+                    TikTok
+                </a>
+                <a href="mailto:duganslegendaryden@gmail.com" class="den-social email">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== MEET THE DEN ====== -->
+    <section class="den-section den-meet">
+        <div class="den-meet-inner den-meet-inner--text-only">
+            <div class="den-meet-body">
+                <span class="den-eyebrow">Meet the Den</span>
+                <h2 class="den-heading">A Roaming Card Shop, Built on Trust.</h2>
+                <p>Dugan's Legendary Den is a US-based Pokémon TCG business based in Austin, Texas. We operate primarily at card shows in Austin and the DFW area, with plans to expand into other regions.</p>
+                <p>Our setup is built around accessibility, variety, and real-time market movement — so we can serve both collectors and competitive buyers with strong inventory turnover and consistent demand at live events.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== PAY HERE ====== -->
+    <section class="den-pay" id="pay">
+        <div class="den-section-inner">
+            <span class="den-eyebrow">Pay Here</span>
+            <h2 class="den-heading" style="font-size:1.4rem;margin-bottom:0;">Settling up after a show? Pick your method.</h2>
+            <div class="den-pay-grid">
+                <a href="https://venmo.com/code?user_id=1840252993929216265&created=1775189872" target="_blank" rel="noopener noreferrer" class="den-pay-btn venmo">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.49 1c.89 1.47 1.3 2.99 1.3 4.93 0 6.14-5.24 11.22-5.24 11.22H9.01L6.47 1.05 12.4.5l1.42 11.42C15.4 9.65 17.11 6.67 17.11 4.58c0-1.17-.25-1.97-.56-2.61L19.49 1z"/></svg>
+                    Venmo
+                </a>
+                <a href="https://cash.app/$DuganD22" target="_blank" rel="noopener noreferrer" class="den-pay-btn cashapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.59 3.47A5.1 5.1 0 0 0 20.55.42C19.55.07 18.17 0 16.41 0H7.59C5.83 0 4.46.07 3.45.42A5.1 5.1 0 0 0 .41 3.47C.07 4.47 0 5.84 0 7.59v8.82c0 1.76.07 3.13.42 4.13a5.1 5.1 0 0 0 3.04 3.04c1 .36 2.37.42 4.13.42h8.82c1.76 0 3.13-.07 4.13-.42a5.1 5.1 0 0 0 3.04-3.04c.36-1 .42-2.37.42-4.13V7.59c0-1.76-.07-3.13-.42-4.13z"/></svg>
+                    Cash App
+                </a>
+                <span class="den-pay-btn zelle" aria-label="Zelle: send to dugansden">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.559 24h-2.841a.483.483 0 0 1-.483-.483v-6.636H4.58a.517.517 0 0 1-.408-.833l9.178-11.86H4.343A.483.483 0 0 1 3.86 3.7V.483A.483.483 0 0 1 4.343 0h14.918a.517.517 0 0 1 .408.833L10.676 12.72h3.366a.483.483 0 0 1 .483.483v3.179a.483.483 0 0 1-.483.483h-.483v6.652z"/></svg>
+                    Zelle · dugansden
+                </span>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="den-footer">
+        <div class="den-footer-inner">
+            <div class="den-footer-col">
+                <h4>About the Den</h4>
+                <p>Family-owned Pokémon TCG shop based in Austin, Texas. Serving collectors at shows across Texas and beyond since 2025.</p>
+                <div class="den-footer-socials">
+                    <a href="https://www.instagram.com/duganslegendaryden" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@duganslegendaryden" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.98a8.2 8.2 0 004.76 1.52V7.05a4.84 4.84 0 01-1-.36z"/></svg>
+                    </a>
+                    <a href="mailto:duganslegendaryden@gmail.com" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="den-footer-col">
+                <h4>The Chambers</h4>
+                <ul>
+                    <li><a href="counter.html">The Counter</a></li>
+                    <li><a href="cases.html">The Cases</a></li>
+                    <li><a href="roster.html">The Roster</a></li>
+                    <li><a href="apothecary.html">The Apothecary</a></li>
+                </ul>
+            </div>
+            <div class="den-footer-col">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="mailto:duganslegendaryden@gmail.com">duganslegendaryden@gmail.com</a></li>
+                    <li>Austin, Texas · USA</li>
+                </ul>
+            </div>
+            <div class="den-footer-baseline">
+                © 2026 Dugan's Legendary Den · All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== BOTTOM TAB BAR (mobile) ====== -->
+    <nav class="den-bottom-nav" aria-label="Primary (mobile)">
+        <a href="counter.html" class="den-bottom-link" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Counter</span>
+        </a>
+        <a href="cases.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h6v6H4zm0 10h6v6H4zm10-10h6v6h-6zm0 10h6v6h-6z"/></svg>
+            <span>Cases</span>
+        </a>
+        <a href="roster.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+            <span>Roster</span>
+        </a>
+        <a href="apothecary.html" class="den-bottom-link">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+            <span>Apothecary</span>
+        </a>
+    </nav>
+
+    <script>
+    /* ============================================================
+       Counter — trio content: next show (live), cards carousel
+       (featured inventory), apothecary (static).
+       Schedule: /schedule.json (static, CDN-cached).
+       Inventory: /.netlify/functions/inventory (live) or
+                  inventory_data.json (local dev).
+       ============================================================ */
+
+    // ── Config ──────────────────────────────────────────────────
+    const CAROUSEL_SLOTS = 5;
+
+    const CAROUSEL_GRADS = [
+        'linear-gradient(135deg,#7A2018,#C9A84C)',
+        'linear-gradient(135deg,#E3BD4D,#AD581E)',
+        'linear-gradient(135deg,#AD581E,#3E2723)',
+        'linear-gradient(135deg,#3D6960,#2A1810)',
+        'linear-gradient(135deg,#2A1810,#7A2018)',
+    ];
+
+    // Heuristic pool: vintage desirables + brand mascot
+    const HEURISTIC_RE = /pikachu|charizard|gengar|eevee|flareon|vaporeon|jolteon|espeon|umbreon|leafeon|glaceon|sylveon|arcanine/i;
+
+    const IS_NETLIFY = window.location.hostname !== 'localhost' &&
+                       window.location.hostname !== '127.0.0.1' &&
+                       window.location.hostname !== '';
+    const INVENTORY_URL = IS_NETLIFY ? '/.netlify/functions/inventory' : 'inventory_data.json';
+
+    // ── Helpers ──────────────────────────────────────────────────
+    function esc(s) {
+        return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function gcalUrl(s) {
+        const pad = n => String(n).padStart(2, '0');
+        const start = `${s.year}${pad(s.monthNum)}${pad(s.startDay)}`;
+        const e = new Date(s.year, s.monthNum - 1, s.endDay + 1);
+        const end = `${e.getFullYear()}${pad(e.getMonth() + 1)}${pad(e.getDate())}`;
+        return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(s.name + " — Dugan's Legendary Den")}&dates=${start}/${end}&location=${encodeURIComponent(s.venue + ', ' + s.city)}`;
+    }
+    function dirUrl(s) {
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.venue + ', ' + s.city)}`;
+    }
+
+    function itemSubline(item) {
+        if (item._cat === 'graded' && item.grading_company && item.grade) {
+            const base = item.set ? `${item.set} · ` : '';
+            return `${base}${item.grading_company} ${item.grade}`;
+        }
+        let s = item.set || '';
+        if (item.number) s += (s ? ' · #' : '#') + item.number;
+        return s || item.variant || '';
+    }
+
+    // ── Next show ────────────────────────────────────────────────
+    function renderNextShow(shows) {
+        const today = new Date();
+        const next = shows.find(s => new Date(s.year, s.monthNum - 1, s.endDay) >= today);
+        const wrap = document.getElementById('trio-show');
+        if (next) {
+            wrap.innerHTML = `
+                <div class="den-trio-show-dates">
+                    <span class="den-trio-show-month">${esc(next.month)}</span>
+                    <span class="den-trio-show-days">${esc(next.dateRange)}</span>
+                </div>
+                <h3 class="den-trio-show-name">${esc(next.name)}</h3>
+                <p class="den-trio-show-venue">${esc(next.venue)}<br>${esc(next.city)}</p>
+                <div class="den-trio-show-actions">
+                    <a class="den-billing-action" href="${dirUrl(next)}" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                        Directions
+                    </a>
+                    <a class="den-billing-action" href="${gcalUrl(next)}" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                        Add to Calendar
+                    </a>
+                </div>
+            `;
+        } else {
+            wrap.innerHTML = `<p class="den-trio-empty">No upcoming shows posted. Follow on Instagram for announcements.</p>`;
+        }
+    }
+
+    // ── Featured carousel ────────────────────────────────────────
+    function buildCarouselPicks(data) {
+        const allItems = [
+            ...(data.singles || []).map(x => ({...x, _cat: 'singles'})),
+            ...(data.graded  || []).map(x => ({...x, _cat: 'graded'})),
+            ...(data.sealed  || []).map(x => ({...x, _cat: 'sealed'})),
+        ];
+        const featured = allItems.filter(i => i.featured);
+
+        if (featured.length === CAROUSEL_SLOTS) return featured;
+
+        if (featured.length > CAROUSEL_SLOTS) {
+            // Randomly pick CAROUSEL_SLOTS from the flagged set (natural rotation)
+            return [...featured].sort(() => Math.random() - 0.5).slice(0, CAROUSEL_SLOTS);
+        }
+
+        // < CAROUSEL_SLOTS: top up with heuristic pool
+        const heuristic = allItems
+            .filter(i => !i.featured && HEURISTIC_RE.test(i.name || ''))
+            .sort((a, b) => {
+                // Arcanine (brand mascot) first, then others
+                const aA = /arcanine/i.test(a.name) ? 1 : 0;
+                const bA = /arcanine/i.test(b.name) ? 1 : 0;
+                return bA - aA;
+            });
+        return [...featured, ...heuristic.slice(0, CAROUSEL_SLOTS - featured.length)];
+    }
+
+    function renderCarousel(picks) {
+        const carousel = document.getElementById('trio-carousel');
+        carousel.innerHTML = '';
+
+        if (!picks.length) {
+            carousel.innerHTML = '<p class="den-trio-empty" style="padding:1rem;text-align:center;">Browse <a href="cases.html">The Cases</a> to see our current inventory.</p>';
+            return;
+        }
+
+        picks.forEach((item, i) => {
+            const slide = document.createElement('a');
+            slide.href = 'cases.html';
+            slide.className = 'den-trio-card-slide' + (i === 0 ? ' is-active' : '');
+            slide.style.background = CAROUSEL_GRADS[i % CAROUSEL_GRADS.length];
+            const band = item.price_band || 'Ask';
+            const sub  = itemSubline(item);
+            slide.innerHTML = `
+                <div class="den-trio-card-frame" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="rgba(255,255,255,0.4)"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5h3V8h4v4h3l-5 5z"/></svg>
+                </div>
+                <div class="den-trio-card-info">
+                    <div class="den-trio-card-name">${esc(item.name || '—')}</div>
+                    <div class="den-trio-card-sub">${esc(sub)}</div>
+                    <span class="den-trio-card-band">${esc(band)}</span>
+                </div>
+            `;
+            carousel.appendChild(slide);
+        });
+
+        let carouselIdx = 0;
+        setInterval(() => {
+            const slides = carousel.querySelectorAll('.den-trio-card-slide');
+            if (!slides.length) return;
+            slides[carouselIdx].classList.remove('is-active');
+            carouselIdx = (carouselIdx + 1) % slides.length;
+            slides[carouselIdx].classList.add('is-active');
+        }, 3500);
+    }
+
+    // ── Apothecary (static — Amazon affiliate, no live data) ────
+    const APOTHECARY_FEATURED = [
+        { name: 'Thermal Label Printer',         hint: 'Earns its keep every show.',         icon: 'printer',  link: 'apothecary.html#cat-vendor-kit' },
+        { name: 'Honeywell Voyager 1470g',       hint: 'Scans TAG, all PSA, CGC.',           icon: 'scanner',  link: 'apothecary.html#cat-show-essentials' },
+        { name: 'Semi Rigid Holders + Sleeves',  hint: 'Submission-ready protection.',       icon: 'sleeve',   link: 'apothecary.html#cat-vendor-kit' }
+    ];
+    const APO_ICONS = {
+        printer: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>',
+        scanner: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 6.5v3h-3v-3h3M11 5H5v6h6V5zm-1.5 9.5v3h-3v-3h3M11 13H5v6h6v-6zm6.5-6.5v3h-3v-3h3M19 5h-6v6h6V5zm-6 8h1.5v1.5H13zm1.5 1.5H16V16h-1.5zM16 13h1.5v1.5H16zm-3 3h1.5v1.5H13zm1.5 1.5H16V19h-1.5zM16 16h1.5v1.5H16zm1.5-1.5H19V16h-1.5zm0 3H19V19h-1.5z"/></svg>',
+        sleeve:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/></svg>'
+    };
+
+    const apoWrap = document.getElementById('trio-apothecary');
+    apoWrap.innerHTML = APOTHECARY_FEATURED.map(it => `
+        <li class="den-trio-apo-item">
+            <a href="${it.link}">
+                <div class="den-trio-apo-icon" aria-hidden="true">${APO_ICONS[it.icon]}</div>
+                <div class="den-trio-apo-text">
+                    <span class="den-trio-apo-name">${it.name}</span>
+                    <span class="den-trio-apo-hint">${it.hint}</span>
+                </div>
+            </a>
+        </li>
+    `).join('');
+
+    // ── Load data ────────────────────────────────────────────────
+    fetch('/schedule.json')
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(data => renderNextShow(data.shows || []))
+        .catch(() => {
+            document.getElementById('trio-show').innerHTML =
+                '<p class="den-trio-empty">Show schedule unavailable — follow on Instagram for updates.</p>';
+        });
+
+    fetch(INVENTORY_URL)
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+        .then(data => renderCarousel(buildCarouselPicks(data)))
+        .catch(() => {
+            document.getElementById('trio-carousel').innerHTML =
+                '<p class="den-trio-empty" style="padding:1rem;text-align:center;">Browse <a href="cases.html">The Cases</a> to see our inventory.</p>';
+        });
+    </script>
+
+</body>
+</html>
